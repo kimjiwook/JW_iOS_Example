@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3278A45261B4A0D0074988D /* JWLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = A3278A44261B4A0D0074988D /* JWLibrary */; };
 		A33B08712611E93D00B0541E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B08702611E93D00B0541E /* AppDelegate.swift */; };
 		A33B08732611E93D00B0541E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B08722611E93D00B0541E /* SceneDelegate.swift */; };
 		A33B08752611E93D00B0541E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B08742611E93D00B0541E /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3278A45261B4A0D0074988D /* JWLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +146,9 @@
 			dependencies = (
 			);
 			name = JWProject;
+			packageProductDependencies = (
+				A3278A44261B4A0D0074988D /* JWLibrary */,
+			);
 			productName = JWProject;
 			productReference = A33B086D2611E93D00B0541E /* JWProject.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = A33B08642611E93D00B0541E;
+			packageReferences = (
+				A3278A43261B4A0D0074988D /* XCRemoteSwiftPackageReference "JW_Library_SPM_Sample" */,
+			);
 			productRefGroup = A33B086E2611E93D00B0541E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -593,6 +601,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A3278A43261B4A0D0074988D /* XCRemoteSwiftPackageReference "JW_Library_SPM_Sample" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kimjiwook/JW_Library_SPM_Sample.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A3278A44261B4A0D0074988D /* JWLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3278A43261B4A0D0074988D /* XCRemoteSwiftPackageReference "JW_Library_SPM_Sample" */;
+			productName = JWLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A33B08652611E93D00B0541E /* Project object */;
 }
