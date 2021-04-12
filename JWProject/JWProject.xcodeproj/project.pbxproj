@@ -17,6 +17,9 @@
 		A33B08882611E93E00B0541E /* JWProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B08872611E93E00B0541E /* JWProjectTests.swift */; };
 		A33B08932611E93E00B0541E /* JWProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B08922611E93E00B0541E /* JWProjectUITests.swift */; };
 		A34EDCE826243E2C000B633A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A34EDCE726243E2C000B633A /* SnapKit */; };
+		A34EDCEF26244075000B633A /* MainCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34EDCEE26244075000B633A /* MainCellVM.swift */; };
+		A34EDCF426244080000B633A /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34EDCF326244080000B633A /* MainVM.swift */; };
+		A34EDCFD2624417A000B633A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34EDCFC2624417A000B633A /* Constants.swift */; };
 		A3B374B5261C925000C86AFD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A3B374B4261C925000C86AFD /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +55,9 @@
 		A33B088E2611E93E00B0541E /* JWProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33B08922611E93E00B0541E /* JWProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWProjectUITests.swift; sourceTree = "<group>"; };
 		A33B08942611E93E00B0541E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A34EDCEE26244075000B633A /* MainCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellVM.swift; sourceTree = "<group>"; };
+		A34EDCF326244080000B633A /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		A34EDCFC2624417A000B633A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,8 @@
 		A33B086F2611E93D00B0541E /* JWProject */ = {
 			isa = PBXGroup;
 			children = (
+				A34EDCFB26244161000B633A /* Common */,
+				A34EDCEC2624403B000B633A /* Main(메인) */,
 				A33B08702611E93D00B0541E /* AppDelegate.swift */,
 				A33B08722611E93D00B0541E /* SceneDelegate.swift */,
 				A33B08742611E93D00B0541E /* ViewController.swift */,
@@ -132,6 +140,32 @@
 				A33B08942611E93E00B0541E /* Info.plist */,
 			);
 			path = JWProjectUITests;
+			sourceTree = "<group>";
+		};
+		A34EDCEC2624403B000B633A /* Main(메인) */ = {
+			isa = PBXGroup;
+			children = (
+				A34EDCED2624404D000B633A /* VM */,
+			);
+			name = "Main(메인)";
+			path = "Main(메인)";
+			sourceTree = "<group>";
+		};
+		A34EDCED2624404D000B633A /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				A34EDCF326244080000B633A /* MainVM.swift */,
+				A34EDCEE26244075000B633A /* MainCellVM.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		A34EDCFB26244161000B633A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A34EDCFC2624417A000B633A /* Constants.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +309,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A33B08752611E93D00B0541E /* ViewController.swift in Sources */,
+				A34EDCF426244080000B633A /* MainVM.swift in Sources */,
 				A33B08712611E93D00B0541E /* AppDelegate.swift in Sources */,
 				A33B08732611E93D00B0541E /* SceneDelegate.swift in Sources */,
+				A34EDCEF26244075000B633A /* MainCellVM.swift in Sources */,
+				A34EDCFD2624417A000B633A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
