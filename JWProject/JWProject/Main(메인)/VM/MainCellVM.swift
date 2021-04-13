@@ -12,7 +12,7 @@ import UIKit
 
 struct MainCellVM {
     // 객체 ID
-    let uuid = UUID().uuidString
+    var uuid:MainMenuId = .none
     
     // 제목
     var title = ""
@@ -24,9 +24,21 @@ struct MainCellVM {
     let contentFont = UIFont(name: APP_FONT, size: CGFloat(FONT_CONTENT))
     let contentColor:UIColor = .lightGray
     
+    // 상세 이동하는 부분
+    var detailVC:UIViewController?
+    
     // 초기값
-    init(title:String, content:String) {
+    init(uuid:MainMenuId, title:String, content:String) {
+        self.uuid = uuid
         self.title = title
         self.content = content
     }
+}
+
+
+enum MainMenuId {
+    case none // 디폴트
+    
+    /// UIMenu
+    case UIMenu
 }

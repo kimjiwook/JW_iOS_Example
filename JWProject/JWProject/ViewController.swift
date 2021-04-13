@@ -37,6 +37,7 @@ extension ViewController: JWViewProtocol {
         sample.shared.temp()
         
         // #. 디폴트
+        self.title = "JW iOS Sample"
         
         
         // UI 구성하기.
@@ -92,6 +93,19 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource 
         collectionView.deselectItem(at: indexPath, animated: true)
         
         // 액션 진행
+        let cellVM:MainCellVM = vm.itmes[indexPath.row]
+        switch cellVM.uuid {
+        
+        // UIMenu Sample 이동
+        case .UIMenu:
+            let uiMenuVC = UIMenuSampleViewController()
+            self.navigationController?.pushViewController(uiMenuVC, animated: true)
+            break
+            
+        default:
+            // 아직 정의되지 않은 부분
+            break
+        }
     }
 }
 

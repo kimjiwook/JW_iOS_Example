@@ -28,7 +28,7 @@ struct MainVM {
         var result = [MainCellVM]()
         
         // 1. UIMenu 샘플 소스
-        result.append(MainCellVM(title: "UIMenu", content: "UIMenu Sample Source"))
+        result.append(MainCellVM(uuid:.UIMenu, title: "UIMenu", content: "UIMenu Sample Source"))
         
         
         return result

@@ -20,6 +20,7 @@
 		A34EDCEF26244075000B633A /* MainCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34EDCEE26244075000B633A /* MainCellVM.swift */; };
 		A34EDCF426244080000B633A /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34EDCF326244080000B633A /* MainVM.swift */; };
 		A34EDCFD2624417A000B633A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34EDCFC2624417A000B633A /* Constants.swift */; };
+		A37169DD2625D27B0072AAB3 /* UIMenuSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37169DC2625D27B0072AAB3 /* UIMenuSampleViewController.swift */; };
 		A3B374B5261C925000C86AFD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A3B374B4261C925000C86AFD /* Alamofire */; };
 		A3D5CB802625BC88008BBDAC /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D5CB7E2625BC88008BBDAC /* MainCell.swift */; };
 		A3D5CB812625BC88008BBDAC /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3D5CB7F2625BC88008BBDAC /* MainCell.xib */; };
@@ -60,6 +61,8 @@
 		A34EDCEE26244075000B633A /* MainCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellVM.swift; sourceTree = "<group>"; };
 		A34EDCF326244080000B633A /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		A34EDCFC2624417A000B633A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A37169DC2625D27B0072AAB3 /* UIMenuSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMenuSampleViewController.swift; sourceTree = "<group>"; };
+		A37169E42625D5E20072AAB3 /* JWProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JWProject.entitlements; sourceTree = "<group>"; };
 		A3D5CB7E2625BC88008BBDAC /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		A3D5CB7F2625BC88008BBDAC /* MainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,8 +118,10 @@
 		A33B086F2611E93D00B0541E /* JWProject */ = {
 			isa = PBXGroup;
 			children = (
+				A37169E42625D5E20072AAB3 /* JWProject.entitlements */,
 				A34EDCFB26244161000B633A /* Common */,
 				A34EDCEC2624403B000B633A /* Main(메인) */,
+				A37169DA2625D2470072AAB3 /* SubViews(내부상세) */,
 				A33B08702611E93D00B0541E /* AppDelegate.swift */,
 				A33B08722611E93D00B0541E /* SceneDelegate.swift */,
 				A33B08742611E93D00B0541E /* ViewController.swift */,
@@ -171,6 +176,23 @@
 				A34EDCFC2624417A000B633A /* Constants.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		A37169DA2625D2470072AAB3 /* SubViews(내부상세) */ = {
+			isa = PBXGroup;
+			children = (
+				A37169DB2625D25F0072AAB3 /* UIMenu */,
+			);
+			name = "SubViews(내부상세)";
+			path = "SubViews(내부상세)";
+			sourceTree = "<group>";
+		};
+		A37169DB2625D25F0072AAB3 /* UIMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A37169DC2625D27B0072AAB3 /* UIMenuSampleViewController.swift */,
+			);
+			path = UIMenu;
 			sourceTree = "<group>";
 		};
 		A3D5CB7D2625BC50008BBDAC /* VIew */ = {
@@ -329,6 +351,7 @@
 				A33B08712611E93D00B0541E /* AppDelegate.swift in Sources */,
 				A33B08732611E93D00B0541E /* SceneDelegate.swift in Sources */,
 				A34EDCEF26244075000B633A /* MainCellVM.swift in Sources */,
+				A37169DD2625D27B0072AAB3 /* UIMenuSampleViewController.swift in Sources */,
 				A34EDCFD2624417A000B633A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +528,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = JWProject/JWProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3HTS687964;
 				INFOPLIST_FILE = JWProject/Info.plist;
@@ -514,6 +538,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.JW.iOSSample.JWProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -524,6 +549,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = JWProject/JWProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3HTS687964;
 				INFOPLIST_FILE = JWProject/Info.plist;
@@ -533,6 +559,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.JW.iOSSample.JWProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
