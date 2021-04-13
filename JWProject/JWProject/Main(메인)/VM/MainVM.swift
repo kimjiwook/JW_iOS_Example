@@ -12,20 +12,23 @@ import UIKit
 
 struct MainVM {
     // Cell 구성 요소
-    var itmes:[MainCellVM] = MainVM.getItems()
+    var itmes:[MainCellVM] = [MainCellVM]()
+    
+    let cellId = "MainCell"
     
     // 초기값
     init() {
-        
+        itmes = getItems()
     }
     
     /// Cell Item 꾸며준 내용
     /// 고정 형식이다 보니 네트워크 통신 없는 형식입니다.
     /// - Returns: [MainCellVM]
-    class func getItems() -> [MainCellVM] {
+    func getItems() -> [MainCellVM] {
         var result = [MainCellVM]()
         
-        MainCellVM
+        // 1. UIMenu 샘플 소스
+        result.append(MainCellVM(title: "UIMenu", content: "UIMenu Sample Source"))
         
         
         return result

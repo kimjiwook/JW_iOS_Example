@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     var mainCollectionView:UICollectionView? = nil
     
     // MARK: - 내부, 외부 변수 관련
-    
+    let vm = MainVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,19 +36,31 @@ extension ViewController: JWViewProtocol {
     func initDzViews() {
         sample.shared.temp()
         
+        // #. 디폴트
+        
+        
         // UI 구성하기.
         // 1. 컬렉션뷰
         if nil == self.mainCollectionView {
-            self.mainCollectionView = UICollectionView()
-            self.mainCollectionView?.collectionViewLayout = self.createCompositionalLayout()
+            self.mainCollectionView = UICollectionView(frame: .zero, collectionViewLayout: self.createCompositionalLayout())
+            self.mainCollectionView?.backgroundColor = .lightGray
+            
+            self.mainCollectionView?.register(UINib.init(nibName: vm.cellId, bundle: nil), forCellWithReuseIdentifier: vm.cellId)
+            
             self.mainCollectionView?.delegate = self as UICollectionViewDelegate
             self.mainCollectionView?.dataSource = self as UICollectionViewDataSource
+            
+            self.view.addSubview(self.mainCollectionView!)
         }
         
+        // 오토레이아웃 설정
+        self.updateDzViews()
     }
     
     func updateDzViews() {
-        
+        self.mainCollectionView?.snp.remakeConstraints({ (make) in
+            make.top.bottom.leading.trailing.equalToSuperview()
+        })
     }
     
     func setDzNavigationViews() {
@@ -63,27 +75,37 @@ extension ViewController: JWViewProtocol {
 // MARK: - #. 컬렉션뷰 델리게이트, 데이터 소스 관련
 extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return vm.itmes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: vm.cellId, for: indexPath) as! MainCell
+        
+        // 데이터 꾸며주는 부분
+        let cellVM:MainCellVM = vm.itmes[indexPath.row]
+        cell.configrationCell(vm: cellVM)
+                
+        return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        // 액션 진행
+    }
 }
 
 // MARK: - #. 컬렉션뷰 레이아웃
 extension ViewController {
-    /// 1. 해더 사이즈 구하기
-    /// - Returns: NSCollectionLayoutBoundarySupplementaryItem
-    private func createHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
-        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                heightDimension: .absolute(40))
-        let headerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
-        
-        return headerElement
-    }
+//    /// 1. 해더 사이즈 구하기
+//    /// - Returns: NSCollectionLayoutBoundarySupplementaryItem
+//    private func createHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
+//        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+//                                                heightDimension: .absolute(40))
+//        let headerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+//
+//        return headerElement
+//    }
     
     /// 2. 배경 만들기 (그룹이 아니여서 배경이 없음)
 //    private func createSectionBackground(count:Int = 0) -> NSCollectionLayoutDecorationItem {
@@ -120,7 +142,7 @@ extension ViewController {
             section.contentInsets = NSDirectionalEdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12)
             
             section.interGroupSpacing = 8
-            section.boundarySupplementaryItems = [self.createHeader()]
+            // section.boundarySupplementaryItems = [self.createHeader()]
             // section.decorationItems = [self.createSectionBackground(count: array.count)] // 디폴트 배경화면 필요한 항목
             return section
         }

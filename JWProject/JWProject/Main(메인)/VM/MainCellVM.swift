@@ -15,15 +15,18 @@ struct MainCellVM {
     let uuid = UUID().uuidString
     
     // 제목
-    let title = ""
+    var title = ""
     let titleFont = UIFont(name: APP_FONT, size: CGFloat(FONT_TITLE))
+    let titleColor:UIColor = .black
     
     // 내용
-    let content = ""
+    var content = ""
     let contentFont = UIFont(name: APP_FONT, size: CGFloat(FONT_CONTENT))
+    let contentColor:UIColor = .lightGray
     
     // 초기값
     init(title:String, content:String) {
-        
+        self.title = title
+        self.content = content
     }
 }
