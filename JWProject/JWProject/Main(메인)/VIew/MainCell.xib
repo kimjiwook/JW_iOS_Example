@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="290" height="82"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tray.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gOD-nI-chE">
-                                <rect key="frame" x="16" y="17.5" width="50" height="46.5"/>
+                                <rect key="frame" x="16" y="15" width="50" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gOD-nI-chE" secondAttribute="height" multiplier="1:1" id="IEQ-ct-hRm"/>
                                 </constraints>
