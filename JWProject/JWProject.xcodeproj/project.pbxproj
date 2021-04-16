@@ -696,7 +696,7 @@
 			repositoryURL = "https://github.com/kimjiwook/JW_Library_SPM_Sample.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.2;
+				minimumVersion = 1.1.5;
 			};
 		};
 		A34EDCE626243E2C000B633A /* XCRemoteSwiftPackageReference "SnapKit" */ = {

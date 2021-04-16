@@ -28,6 +28,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.initDzViews()
+        
+        // #. 접근제어 테스트
+        let text1 = JWUtil.shared.jwText1
+        let uuid1 = JWUtil.shared.getUUID()
     }
 }
 
