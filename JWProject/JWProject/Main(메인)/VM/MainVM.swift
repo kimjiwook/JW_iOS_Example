@@ -30,6 +30,9 @@ struct MainVM {
         // 1. UIMenu 샘플 소스
         result.append(MainCellVM(uuid:.UIMenu, title: "UIMenu", content: "UIMenu Sample Source"))
         
+        // 2. SPM 등록된 ViewController
+        result.append(MainCellVM(uuid: .SPMSampleVC, title: "SPMSampleViewController", content: "SPM에서 만든 ViewController"))
+        
         
         return result
     }

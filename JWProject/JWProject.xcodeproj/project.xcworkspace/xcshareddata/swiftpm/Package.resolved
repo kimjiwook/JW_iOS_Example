@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "state": {
           "branch": null,
-          "revision": "4d19ad82f80cc71ff829b941ded114c56f4f604c",
-          "version": "5.4.2"
+          "revision": "f96b619bcb2383b43d898402283924b80e2c4bae",
+          "version": "5.4.3"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/kimjiwook/JW_Library_SPM_Sample.git",
         "state": {
           "branch": null,
-          "revision": "77224494ff4c7a382737c6bccc8c7f79d89fc541",
-          "version": "1.1.5"
+          "revision": "832713d30b752a41445f6930c3e3a40bcb118709",
+          "version": "1.1.10"
         }
       },
       {

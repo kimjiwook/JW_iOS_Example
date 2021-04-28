@@ -7,15 +7,7 @@
 
 import UIKit
 import SnapKit  //AutoLayout 서포트
-import JWLibrary
-
-public class sample {
-    public static let shared = sample()
-    
-    func temp() {
-        
-    }
-}
+import JWLibrary // 테스트 라이브러리
 
 class ViewController: UIViewController {
     // MARK: - UI 관련
@@ -38,8 +30,6 @@ class ViewController: UIViewController {
 /// 1. 프로토콜 상속받기!!
 extension ViewController: JWViewProtocol {
     func initDzViews() {
-        sample.shared.temp()
-        
         // #. 디폴트
         self.title = "JW iOS Sample"
         
@@ -104,6 +94,16 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource 
         case .UIMenu:
             let uiMenuVC = UIMenuSampleViewController()
             self.navigationController?.pushViewController(uiMenuVC, animated: true)
+            break
+        case .SPMSampleVC:
+            
+            /*
+             xib, bundle이 현재 Target 에 없음 음...
+             접근 가능한 resource 추가 해야함
+             */
+//            let spmVC = JWViewController(nibName: "JWViewController", bundle: nil)
+            let spmVC = JWViewController.instanse()
+            self.navigationController?.pushViewController(spmVC, animated: true)
             break
             
         default:
