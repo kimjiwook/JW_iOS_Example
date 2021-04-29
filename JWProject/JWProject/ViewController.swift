@@ -9,6 +9,7 @@ import UIKit
 import SnapKit  //AutoLayout 서포트
 import JWLibrary // 테스트 라이브러리
 // import KLAGOCommon // 회사꺼
+import Hero // Hero 라이브러리 참고하려고 받음
 
 class ViewController: UIViewController {
     // MARK: - UI 관련
@@ -25,7 +26,6 @@ class ViewController: UIViewController {
         // #. 접근제어 테스트
         let text1 = JWUtil.shared.jwText1
         let uuid1 = JWUtil.shared.getUUID()
-        
         
     }
 }
