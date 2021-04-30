@@ -29,6 +29,15 @@
         }
       },
       {
+        "package": "KLAGO_COMMON",
+        "repositoryURL": "http://14.41.55.45:8089/xodhks0113/klago_common.git",
+        "state": {
+          "branch": null,
+          "revision": "2c24f8ab9d1e6005de7fd71c96de0f996a2c2fe3",
+          "version": null
+        }
+      },
+      {
         "package": "SnapKit",
         "repositoryURL": "https://github.com/SnapKit/SnapKit.git",
         "state": {

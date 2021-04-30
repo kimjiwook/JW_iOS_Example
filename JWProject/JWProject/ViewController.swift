@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit  //AutoLayout 서포트
 import JWLibrary // 테스트 라이브러리
-// import KLAGOCommon // 회사꺼
+import KLAGO_COMMON // 회사꺼
 import Hero // Hero 라이브러리 참고하려고 받음
 
 class ViewController: UIViewController {
@@ -110,8 +110,13 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource 
             break
             
         case .SPMDZSampleVC:
+            // Sources
+            let dzVC = DzSampleViewController.instanse()
+            self.navigationController?.pushViewController(dzVC, animated: true)
             
-//            let dzVC =
+            // Sources > fileVC 폴더
+            let fileVC = FileVC.instanse()
+            self.navigationController?.pushViewController(fileVC, animated: true)
             break
             
         default:

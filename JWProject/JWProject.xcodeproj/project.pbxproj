@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A3097E63263AAAE100D5222B /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = A3097E62263AAAE100D5222B /* Hero */; };
 		A3097E64263AAAE100D5222B /* Hero in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A3097E62263AAAE100D5222B /* Hero */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A30B33AF263B8988005999AF /* KLAGO_COMMON in Frameworks */ = {isa = PBXBuildFile; productRef = A30B33AE263B8988005999AF /* KLAGO_COMMON */; };
+		A30B33B0263B8988005999AF /* KLAGO_COMMON in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A30B33AE263B8988005999AF /* KLAGO_COMMON */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A3278A45261B4A0D0074988D /* JWLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = A3278A44261B4A0D0074988D /* JWLibrary */; };
 		A33B08712611E93D00B0541E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B08702611E93D00B0541E /* AppDelegate.swift */; };
 		A33B08732611E93D00B0541E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B08722611E93D00B0541E /* SceneDelegate.swift */; };
@@ -51,6 +53,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A30B33B0263B8988005999AF /* KLAGO_COMMON in Embed Frameworks */,
 				A3097E64263AAAE100D5222B /* Hero in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -89,6 +92,7 @@
 			files = (
 				A3278A45261B4A0D0074988D /* JWLibrary in Frameworks */,
 				A3097E63263AAAE100D5222B /* Hero in Frameworks */,
+				A30B33AF263B8988005999AF /* KLAGO_COMMON in Frameworks */,
 				A3B374B5261C925000C86AFD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +244,7 @@
 				A3278A44261B4A0D0074988D /* JWLibrary */,
 				A3B374B4261C925000C86AFD /* Alamofire */,
 				A3097E62263AAAE100D5222B /* Hero */,
+				A30B33AE263B8988005999AF /* KLAGO_COMMON */,
 			);
 			productName = JWProject;
 			productReference = A33B086D2611E93D00B0541E /* JWProject.app */;
@@ -316,6 +321,7 @@
 				A3278A43261B4A0D0074988D /* XCRemoteSwiftPackageReference "JW_Library_SPM_Sample" */,
 				A3B374B3261C925000C86AFD /* XCRemoteSwiftPackageReference "Alamofire" */,
 				A3097E61263AAAE100D5222B /* XCRemoteSwiftPackageReference "Hero" */,
+				A30B33AD263B8988005999AF /* XCRemoteSwiftPackageReference "klago_common" */,
 			);
 			productRefGroup = A33B086E2611E93D00B0541E /* Products */;
 			projectDirPath = "";
@@ -715,6 +721,14 @@
 				minimumVersion = 1.6.1;
 			};
 		};
+		A30B33AD263B8988005999AF /* XCRemoteSwiftPackageReference "klago_common" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://14.41.55.45:8089/xodhks0113/klago_common.git";
+			requirement = {
+				kind = revision;
+				revision = 2c24f8ab9d1e6005de7fd71c96de0f996a2c2fe3;
+			};
+		};
 		A3278A43261B4A0D0074988D /* XCRemoteSwiftPackageReference "JW_Library_SPM_Sample" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kimjiwook/JW_Library_SPM_Sample.git";
@@ -738,6 +752,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A3097E61263AAAE100D5222B /* XCRemoteSwiftPackageReference "Hero" */;
 			productName = Hero;
+		};
+		A30B33AE263B8988005999AF /* KLAGO_COMMON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A30B33AD263B8988005999AF /* XCRemoteSwiftPackageReference "klago_common" */;
+			productName = KLAGO_COMMON;
 		};
 		A3278A44261B4A0D0074988D /* JWLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
