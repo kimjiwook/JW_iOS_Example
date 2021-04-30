@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3097E63263AAAE100D5222B /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = A3097E62263AAAE100D5222B /* Hero */; };
+		A3097E64263AAAE100D5222B /* Hero in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A3097E62263AAAE100D5222B /* Hero */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A3278A45261B4A0D0074988D /* JWLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = A3278A44261B4A0D0074988D /* JWLibrary */; };
 		A33B08712611E93D00B0541E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B08702611E93D00B0541E /* AppDelegate.swift */; };
 		A33B08732611E93D00B0541E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B08722611E93D00B0541E /* SceneDelegate.swift */; };
@@ -16,7 +18,6 @@
 		A33B087D2611E93E00B0541E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33B087B2611E93E00B0541E /* LaunchScreen.storyboard */; };
 		A33B08882611E93E00B0541E /* JWProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B08872611E93E00B0541E /* JWProjectTests.swift */; };
 		A33B08932611E93E00B0541E /* JWProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B08922611E93E00B0541E /* JWProjectUITests.swift */; };
-		A34EDCE826243E2C000B633A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A34EDCE726243E2C000B633A /* SnapKit */; };
 		A34EDCEF26244075000B633A /* MainCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34EDCEE26244075000B633A /* MainCellVM.swift */; };
 		A34EDCF426244080000B633A /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34EDCF326244080000B633A /* MainVM.swift */; };
 		A34EDCFD2624417A000B633A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34EDCFC2624417A000B633A /* Constants.swift */; };
@@ -42,6 +43,20 @@
 			remoteInfo = JWProject;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A3097E65263AAAE100D5222B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A3097E64263AAAE100D5222B /* Hero in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A33B086D2611E93D00B0541E /* JWProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,8 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A34EDCE826243E2C000B633A /* SnapKit in Frameworks */,
 				A3278A45261B4A0D0074988D /* JWLibrary in Frameworks */,
+				A3097E63263AAAE100D5222B /* Hero in Frameworks */,
 				A3B374B5261C925000C86AFD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +229,7 @@
 				A33B08692611E93D00B0541E /* Sources */,
 				A33B086A2611E93D00B0541E /* Frameworks */,
 				A33B086B2611E93D00B0541E /* Resources */,
+				A3097E65263AAAE100D5222B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -223,7 +239,7 @@
 			packageProductDependencies = (
 				A3278A44261B4A0D0074988D /* JWLibrary */,
 				A3B374B4261C925000C86AFD /* Alamofire */,
-				A34EDCE726243E2C000B633A /* SnapKit */,
+				A3097E62263AAAE100D5222B /* Hero */,
 			);
 			productName = JWProject;
 			productReference = A33B086D2611E93D00B0541E /* JWProject.app */;
@@ -299,7 +315,7 @@
 			packageReferences = (
 				A3278A43261B4A0D0074988D /* XCRemoteSwiftPackageReference "JW_Library_SPM_Sample" */,
 				A3B374B3261C925000C86AFD /* XCRemoteSwiftPackageReference "Alamofire" */,
-				A34EDCE626243E2C000B633A /* XCRemoteSwiftPackageReference "SnapKit" */,
+				A3097E61263AAAE100D5222B /* XCRemoteSwiftPackageReference "Hero" */,
 			);
 			productRefGroup = A33B086E2611E93D00B0541E /* Products */;
 			projectDirPath = "";
@@ -691,20 +707,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A3097E61263AAAE100D5222B /* XCRemoteSwiftPackageReference "Hero" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HeroTransitions/Hero.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.1;
+			};
+		};
 		A3278A43261B4A0D0074988D /* XCRemoteSwiftPackageReference "JW_Library_SPM_Sample" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kimjiwook/JW_Library_SPM_Sample.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.2;
-			};
-		};
-		A34EDCE626243E2C000B633A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.1;
+				minimumVersion = 1.1.11;
 			};
 		};
 		A3B374B3261C925000C86AFD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
@@ -718,15 +734,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A3097E62263AAAE100D5222B /* Hero */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3097E61263AAAE100D5222B /* XCRemoteSwiftPackageReference "Hero" */;
+			productName = Hero;
+		};
 		A3278A44261B4A0D0074988D /* JWLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A3278A43261B4A0D0074988D /* XCRemoteSwiftPackageReference "JW_Library_SPM_Sample" */;
 			productName = JWLibrary;
-		};
-		A34EDCE726243E2C000B633A /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A34EDCE626243E2C000B633A /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
 		};
 		A3B374B4261C925000C86AFD /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

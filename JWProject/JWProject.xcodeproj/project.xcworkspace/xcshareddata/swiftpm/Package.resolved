@@ -6,8 +6,17 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "state": {
           "branch": null,
-          "revision": "4d19ad82f80cc71ff829b941ded114c56f4f604c",
-          "version": "5.4.2"
+          "revision": "f96b619bcb2383b43d898402283924b80e2c4bae",
+          "version": "5.4.3"
+        }
+      },
+      {
+        "package": "Hero",
+        "repositoryURL": "https://github.com/HeroTransitions/Hero.git",
+        "state": {
+          "branch": null,
+          "revision": "efa709686035831b23b7bf58f652b0c4b892aa1d",
+          "version": "1.6.1"
         }
       },
       {
@@ -15,8 +24,8 @@
         "repositoryURL": "https://github.com/kimjiwook/JW_Library_SPM_Sample.git",
         "state": {
           "branch": null,
-          "revision": "9e9912b31534670f2000ee2dca74f843f2a3ca37",
-          "version": "1.1.2"
+          "revision": "5d0f99a290bbbb4d93d376c4bd41780780630aba",
+          "version": "1.1.11"
         }
       },
       {

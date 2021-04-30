@@ -7,15 +7,9 @@
 
 import UIKit
 import SnapKit  //AutoLayout 서포트
-import JWLibrary
-
-public class sample {
-    public static let shared = sample()
-    
-    func temp() {
-        
-    }
-}
+import JWLibrary // 테스트 라이브러리
+//import KLAGO_COMMON // 회사꺼
+import Hero // Hero 라이브러리 참고하려고 받음
 
 class ViewController: UIViewController {
     // MARK: - UI 관련
@@ -28,14 +22,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.initDzViews()
+        
+        // #. 접근제어 테스트
+        let text1 = JWUtil.shared.jwText1
+        let uuid1 = JWUtil.shared.getUUID()
+        
     }
 }
 
 /// 1. 프로토콜 상속받기!!
 extension ViewController: JWViewProtocol {
     func initDzViews() {
-        sample.shared.temp()
-        
         // #. 디폴트
         self.title = "JW iOS Sample"
         
@@ -100,6 +97,26 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource 
         case .UIMenu:
             let uiMenuVC = UIMenuSampleViewController()
             self.navigationController?.pushViewController(uiMenuVC, animated: true)
+            break
+        case .SPMSampleVC:
+            
+            /*
+             xib, bundle이 현재 Target 에 없음 음...
+             접근 가능한 resource 추가 해야함
+             */
+//            let spmVC = JWViewController(nibName: "JWViewController", bundle: nil)
+            let spmVC = JWViewController.instanse()
+            self.navigationController?.pushViewController(spmVC, animated: true)
+            break
+            
+        case .SPMDZSampleVC:
+//            // Sources
+//            let dzVC = DzSampleViewController.instanse()
+//            self.navigationController?.pushViewController(dzVC, animated: true)
+//
+//            // Sources > fileVC 폴더
+//            let fileVC = FileVC.instanse()
+//            self.navigationController?.pushViewController(fileVC, animated: true)
             break
             
         default:

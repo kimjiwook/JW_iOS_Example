@@ -41,4 +41,10 @@ enum MainMenuId {
     
     /// UIMenu
     case UIMenu
+    
+    /// SPM Sample ViewController
+    case SPMSampleVC
+    
+    /// SPM 회사 ViewController
+    case SPMDZSampleVC
 }
