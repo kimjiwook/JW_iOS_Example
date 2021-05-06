@@ -109,14 +109,8 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource 
             self.navigationController?.pushViewController(spmVC, animated: true)
             break
             
-        case .SPMDZSampleVC:
-//            // Sources
-//            let dzVC = DzSampleViewController.instanse()
-//            self.navigationController?.pushViewController(dzVC, animated: true)
-//
-//            // Sources > fileVC 폴더
-//            let fileVC = FileVC.instanse()
-//            self.navigationController?.pushViewController(fileVC, animated: true)
+        case .SFSSymbols_Apple:
+            
             break
             
         default:

@@ -33,8 +33,8 @@ struct MainVM {
         // 2. SPM 등록된 ViewController
         result.append(MainCellVM(uuid: .SPMSampleVC, title: "SPMSampleViewController", content: "SPM에서 만든 ViewController"))
         
-        // 3. 회사 SPM 등록된 ViewController
-        result.append(MainCellVM(uuid: .SPMDZSampleVC, title: "SPMDZSampleViewController", content: "SPM에서 만든 회사 ViewController"))
+        // 3. Apple-SFSymbols
+        result.append(MainCellVM(uuid: .SFSSymbols_Apple, title: "SFSSymbols_Apple", content: "Apple 기본이미지 정보샘플"))
         
         
         return result

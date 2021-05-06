@@ -25,6 +25,8 @@
 		A3B374B5261C925000C86AFD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A3B374B4261C925000C86AFD /* Alamofire */; };
 		A3D5CB802625BC88008BBDAC /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D5CB7E2625BC88008BBDAC /* MainCell.swift */; };
 		A3D5CB812625BC88008BBDAC /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3D5CB7F2625BC88008BBDAC /* MainCell.xib */; };
+		A3EE3016264432CA00EE87BC /* SFSymbols_AppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EE3014264432CA00EE87BC /* SFSymbols_AppleViewController.swift */; };
+		A3EE3017264432CA00EE87BC /* SFSymbols_AppleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3EE3015264432CA00EE87BC /* SFSymbols_AppleViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		A37169E42625D5E20072AAB3 /* JWProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JWProject.entitlements; sourceTree = "<group>"; };
 		A3D5CB7E2625BC88008BBDAC /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		A3D5CB7F2625BC88008BBDAC /* MainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
+		A3EE3014264432CA00EE87BC /* SFSymbols_AppleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols_AppleViewController.swift; sourceTree = "<group>"; };
+		A3EE3015264432CA00EE87BC /* SFSymbols_AppleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SFSymbols_AppleViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				A37169DB2625D25F0072AAB3 /* UIMenu */,
+				A3EE3013264432A200EE87BC /* SFSymbols_Apple */,
 			);
 			name = "SubViews(내부상세)";
 			path = "SubViews(내부상세)";
@@ -217,6 +222,15 @@
 				A3D5CB7F2625BC88008BBDAC /* MainCell.xib */,
 			);
 			path = VIew;
+			sourceTree = "<group>";
+		};
+		A3EE3013264432A200EE87BC /* SFSymbols_Apple */ = {
+			isa = PBXGroup;
+			children = (
+				A3EE3014264432CA00EE87BC /* SFSymbols_AppleViewController.swift */,
+				A3EE3015264432CA00EE87BC /* SFSymbols_AppleViewController.xib */,
+			);
+			path = SFSymbols_Apple;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +349,7 @@
 			files = (
 				A33B087D2611E93E00B0541E /* LaunchScreen.storyboard in Resources */,
 				A33B087A2611E93E00B0541E /* Assets.xcassets in Resources */,
+				A3EE3017264432CA00EE87BC /* SFSymbols_AppleViewController.xib in Resources */,
 				A3D5CB812625BC88008BBDAC /* MainCell.xib in Resources */,
 				A33B08782611E93D00B0541E /* Main.storyboard in Resources */,
 			);
@@ -366,6 +381,7 @@
 				A34EDCF426244080000B633A /* MainVM.swift in Sources */,
 				A33B08712611E93D00B0541E /* AppDelegate.swift in Sources */,
 				A33B08732611E93D00B0541E /* SceneDelegate.swift in Sources */,
+				A3EE3016264432CA00EE87BC /* SFSymbols_AppleViewController.swift in Sources */,
 				A34EDCEF26244075000B633A /* MainCellVM.swift in Sources */,
 				A37169DD2625D27B0072AAB3 /* UIMenuSampleViewController.swift in Sources */,
 				A34EDCFD2624417A000B633A /* Constants.swift in Sources */,
