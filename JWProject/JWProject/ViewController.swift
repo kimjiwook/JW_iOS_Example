@@ -109,8 +109,10 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource 
             self.navigationController?.pushViewController(spmVC, animated: true)
             break
             
-        case .SFSSymbols_Apple:
-            
+        case .SFSymbols_Apple:
+            // 애플 SF Symbols 테스트
+            let sfVC = SFSymbols_AppleViewController.instanse()
+            self.navigationController?.pushViewController(sfVC, animated: true)
             break
             
         default:

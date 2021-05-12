@@ -14,5 +14,10 @@ class SFSymbols_AppleViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
+    /// 생성자 추가.
+    open class func instanse() -> SFSymbols_AppleViewController {
+        let desc = SFSymbols_AppleViewController(nibName: "SFSymbols_AppleViewController", bundle: nil)
+        return desc
+    }
 }

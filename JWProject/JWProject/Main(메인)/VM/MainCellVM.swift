@@ -46,5 +46,5 @@ enum MainMenuId {
     case SPMSampleVC
     
     /// Apple - SFSymbols
-    case SFSSymbols_Apple
+    case SFSymbols_Apple
 }
