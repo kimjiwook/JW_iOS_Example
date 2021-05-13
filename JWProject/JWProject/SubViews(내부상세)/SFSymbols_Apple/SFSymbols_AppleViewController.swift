@@ -44,8 +44,9 @@ extension SFSymbols_AppleViewController: JWViewProtocol {
         /*
          2. 이름 영역에 특정 기호 넣어보기 (기호복사를 통해 사용이 가능함)
          􀆔, 􀆕, 􀆖, 􀆝, 􀆮, 􀖃, 􀇑
-         이것저것 다 복사됨
+         이것저것 다 복사됨 (문제는 폰트가 SF Pro, SF .. 등등이 없는데..? 깨져서 나옴)
          */
+        //self.codeLabel.font = UIFont(name: "Symbol", size: 15)
         self.codeLabel.text = "기호복사 [􀆔, 􀆕, 􀆖, 􀆝, 􀆮, 􀖃, 􀇑]"
     }
     
