@@ -21,7 +21,7 @@
 # CryptoKit 샘플 예제
 
 [참고 블로그]
-- ㅇㅇㅇ
+- https://xodhks0113.blogspot.com/2021/05/ios-cryptokit-sha512-salt.html
  
 [실행위치]
 - Plyground > CryptoKitSample.playground
