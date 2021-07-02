@@ -36,6 +36,9 @@ struct MainVM {
         // 3. Apple-SFSymbols
         result.append(MainCellVM(uuid: .SFSymbols_Apple, title: "SFSSymbols_Apple", content: "Apple 기본이미지 정보샘플"))
         
+        // 4. Pinch Collection 샘플
+        result.append(MainCellVM(uuid: .PinchCollectionVC, title: "PinchCollectionVC", content: "CollectionView Pinch 샘플"))
+        
         
         return result
     }

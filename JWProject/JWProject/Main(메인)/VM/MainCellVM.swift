@@ -47,4 +47,7 @@ enum MainMenuId {
     
     /// Apple - SFSymbols
     case SFSymbols_Apple
+    
+    /// Pinch CollectionVC
+    case PinchCollectionVC
 }

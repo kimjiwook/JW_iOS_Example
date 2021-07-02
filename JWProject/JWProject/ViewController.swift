@@ -115,6 +115,12 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource 
             self.navigationController?.pushViewController(sfVC, animated: true)
             break
             
+        case .PinchCollectionVC:
+            // Pinch Collection 테스트
+            let pinchVC = PinchCollectionView.instanse()
+            self.navigationController?.pushViewController(pinchVC, animated: true)
+            break
+            
         default:
             // 아직 정의되지 않은 부분
             break

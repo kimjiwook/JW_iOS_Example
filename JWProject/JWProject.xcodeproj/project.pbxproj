@@ -18,6 +18,10 @@
 		A33B087D2611E93E00B0541E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33B087B2611E93E00B0541E /* LaunchScreen.storyboard */; };
 		A33B08882611E93E00B0541E /* JWProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B08872611E93E00B0541E /* JWProjectTests.swift */; };
 		A33B08932611E93E00B0541E /* JWProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B08922611E93E00B0541E /* JWProjectUITests.swift */; };
+		A3445D9E268DB26100F37B54 /* PinchCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3445D9D268DB26100F37B54 /* PinchCollectionView.swift */; };
+		A3445DA1268DB54000F37B54 /* CellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3445DA0268DB54000F37B54 /* CellVM.swift */; };
+		A3445DA4268DB55600F37B54 /* PinchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3445DA2268DB55600F37B54 /* PinchCell.swift */; };
+		A3445DA5268DB55600F37B54 /* PinchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3445DA3268DB55600F37B54 /* PinchCell.xib */; };
 		A34EDCEF26244075000B633A /* MainCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34EDCEE26244075000B633A /* MainCellVM.swift */; };
 		A34EDCF426244080000B633A /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34EDCF326244080000B633A /* MainVM.swift */; };
 		A34EDCFD2624417A000B633A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34EDCFC2624417A000B633A /* Constants.swift */; };
@@ -75,6 +79,10 @@
 		A33B088E2611E93E00B0541E /* JWProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33B08922611E93E00B0541E /* JWProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWProjectUITests.swift; sourceTree = "<group>"; };
 		A33B08942611E93E00B0541E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3445D9D268DB26100F37B54 /* PinchCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchCollectionView.swift; sourceTree = "<group>"; };
+		A3445DA0268DB54000F37B54 /* CellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellVM.swift; sourceTree = "<group>"; };
+		A3445DA2268DB55600F37B54 /* PinchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchCell.swift; sourceTree = "<group>"; };
+		A3445DA3268DB55600F37B54 /* PinchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PinchCell.xib; sourceTree = "<group>"; };
 		A34EDCEE26244075000B633A /* MainCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellVM.swift; sourceTree = "<group>"; };
 		A34EDCF326244080000B633A /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		A34EDCFC2624417A000B633A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -170,6 +178,25 @@
 			path = JWProjectUITests;
 			sourceTree = "<group>";
 		};
+		A3445D9C268DB23D00F37B54 /* PinchCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A3445D9F268DB40800F37B54 /* VM */,
+				A3445D9D268DB26100F37B54 /* PinchCollectionView.swift */,
+				A3445DA2268DB55600F37B54 /* PinchCell.swift */,
+				A3445DA3268DB55600F37B54 /* PinchCell.xib */,
+			);
+			path = PinchCollectionView;
+			sourceTree = "<group>";
+		};
+		A3445D9F268DB40800F37B54 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				A3445DA0268DB54000F37B54 /* CellVM.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
 		A34EDCEC2624403B000B633A /* Main(메인) */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +227,7 @@
 		A37169DA2625D2470072AAB3 /* SubViews(내부상세) */ = {
 			isa = PBXGroup;
 			children = (
+				A3445D9C268DB23D00F37B54 /* PinchCollectionView */,
 				A37169DB2625D25F0072AAB3 /* UIMenu */,
 				A3EE3013264432A200EE87BC /* SFSymbols_Apple */,
 			);
@@ -351,6 +379,7 @@
 				A33B087A2611E93E00B0541E /* Assets.xcassets in Resources */,
 				A3EE3017264432CA00EE87BC /* SFSymbols_AppleViewController.xib in Resources */,
 				A3D5CB812625BC88008BBDAC /* MainCell.xib in Resources */,
+				A3445DA5268DB55600F37B54 /* PinchCell.xib in Resources */,
 				A33B08782611E93D00B0541E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,12 +405,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3445DA1268DB54000F37B54 /* CellVM.swift in Sources */,
 				A33B08752611E93D00B0541E /* ViewController.swift in Sources */,
+				A3445D9E268DB26100F37B54 /* PinchCollectionView.swift in Sources */,
 				A3D5CB802625BC88008BBDAC /* MainCell.swift in Sources */,
 				A34EDCF426244080000B633A /* MainVM.swift in Sources */,
 				A33B08712611E93D00B0541E /* AppDelegate.swift in Sources */,
 				A33B08732611E93D00B0541E /* SceneDelegate.swift in Sources */,
 				A3EE3016264432CA00EE87BC /* SFSymbols_AppleViewController.swift in Sources */,
+				A3445DA4268DB55600F37B54 /* PinchCell.swift in Sources */,
 				A34EDCEF26244075000B633A /* MainCellVM.swift in Sources */,
 				A37169DD2625D27B0072AAB3 /* UIMenuSampleViewController.swift in Sources */,
 				A34EDCFD2624417A000B633A /* Constants.swift in Sources */,
@@ -561,8 +593,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = JWProject/JWProject.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3HTS687964;
+				DEVELOPMENT_TEAM = BR6U9G47ZR;
 				INFOPLIST_FILE = JWProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -582,8 +615,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = JWProject/JWProject.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3HTS687964;
+				DEVELOPMENT_TEAM = BR6U9G47ZR;
 				INFOPLIST_FILE = JWProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
