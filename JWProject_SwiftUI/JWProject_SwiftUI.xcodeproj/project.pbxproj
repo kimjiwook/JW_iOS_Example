@@ -14,6 +14,7 @@
 		A34061122779B5B2005BD4DF /* JWProject_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34061112779B5B2005BD4DF /* JWProject_SwiftUITests.swift */; };
 		A340611C2779B5B2005BD4DF /* JWProject_SwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340611B2779B5B2005BD4DF /* JWProject_SwiftUIUITests.swift */; };
 		A340611E2779B5B2005BD4DF /* JWProject_SwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340611D2779B5B2005BD4DF /* JWProject_SwiftUIUITestsLaunchTests.swift */; };
+		CC98BF24277A040F006133E6 /* AppleTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC98BF23277A040F006133E6 /* AppleTutorialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		A34061172779B5B2005BD4DF /* JWProject_SwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWProject_SwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A340611B2779B5B2005BD4DF /* JWProject_SwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWProject_SwiftUIUITests.swift; sourceTree = "<group>"; };
 		A340611D2779B5B2005BD4DF /* JWProject_SwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWProject_SwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CC98BF23277A040F006133E6 /* AppleTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleTutorialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				A34061002779B5B0005BD4DF /* JWProject_SwiftUIApp.swift */,
 				A34061022779B5B0005BD4DF /* ContentView.swift */,
+				CC98BF23277A040F006133E6 /* AppleTutorialView.swift */,
 				A34061042779B5B2005BD4DF /* Assets.xcassets */,
 				A34061062779B5B2005BD4DF /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				A34061032779B5B0005BD4DF /* ContentView.swift in Sources */,
 				A34061012779B5B0005BD4DF /* JWProject_SwiftUIApp.swift in Sources */,
+				CC98BF24277A040F006133E6 /* AppleTutorialView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

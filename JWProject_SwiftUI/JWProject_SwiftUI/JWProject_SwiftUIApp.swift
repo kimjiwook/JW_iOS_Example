@@ -11,7 +11,8 @@ import SwiftUI
 struct JWProject_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            AppleTutorialView()
         }
     }
 }
