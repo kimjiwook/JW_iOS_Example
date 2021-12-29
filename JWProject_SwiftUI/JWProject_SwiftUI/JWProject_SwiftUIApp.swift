@@ -12,8 +12,9 @@ struct JWProject_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()
-            //AppleTutorialView()
-            ClockView()
+            //AppleTutorialView() // 애플튜토리얼
+            //ClockView() // 실시간 아날로그 시계뷰
+            TimePickerClockView()
         }
     }
 }
