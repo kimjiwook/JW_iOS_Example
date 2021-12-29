@@ -102,8 +102,8 @@ struct ClockBarView: View {
             // 시
             Rectangle()
                 .fill(Color.primary)
-                .frame(width: 4.5, height: (width - 240) / 2)
-                .offset(y: -(width - 180) / 4)
+                .frame(width: 4.5, height: (width - 170) / 2)
+                .offset(y: -(width - 170) / 4)
                 .rotationEffect(.init(degrees: Double(currentTime.hour) * 30)) // 1시간당 30도
             
             // 점
