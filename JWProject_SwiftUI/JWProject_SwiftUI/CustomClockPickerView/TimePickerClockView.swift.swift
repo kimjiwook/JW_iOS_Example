@@ -14,11 +14,12 @@ struct TimePickerClockView: View {
     @StateObject var vm = DateVM()
     var body: some View {
         ZStack {
+            
             Text(vm.seletedDate, style: .time)
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .onTapGesture {
-                    vm.setTiem() // 시간설정
+                    vm.setTime() // 시간설정
                     withAnimation(.spring()) {
                         vm.showPicker.toggle()
                     }
@@ -29,41 +30,49 @@ struct TimePickerClockView: View {
                 VStack {
                     HStack(spacing:18) {
                         Spacer()
-                        HStack(spacing:0) {
-                            Text("\(vm.hour):")
-                                .font(.largeTitle)
-                                .fontWeight(vm.changeToMin ? .light : .bold)
-                                .onTapGesture {
-                                    vm.angle = Double(vm.hour * 30) // 시간값 디폴트 설정
-                                    vm.changeToMin = false // 상태값 변경
-                                }
-                            
-                            Text("\(vm.min < 10 ? "0" : "")\(vm.min)")
-                                .font(.largeTitle)
-                                .fontWeight(vm.changeToMin ? .bold : .light)
-                                .onTapGesture {
-                                    vm.angle = Double(vm.min * 6)
-                                    vm.changeToMin = true // 상태값 변경
-                                }
-                        }
-                        VStack(spacing:8) {
-                            Text("AM")
-                                .font(.title2)
-                                .fontWeight(vm.symbol == "AM" ? .bold : .light)
-                                .onTapGesture {
-                                    vm.symbol = "AM" // 상태값 변경
-                                }
-                            
-                            Text("PM")
-                                .font(.title2)
-                                .fontWeight(vm.symbol == "PM" ? .bold : .light)
-                                .onTapGesture {
-                                    vm.symbol = "PM" // 상태값 변경
-                                }
-                        }
+                        /// 날짜 피커
+                        DatePicker("날짜선택(기본피커)", selection: $vm.seletedDate, displayedComponents: .hourAndMinute)
+                            .font(.largeTitle)
+                            .pickerStyle(.inline)
+                            .colorMultiply(.white)
+                            .colorInvert()
+                        // 시간설정뷰
+//                        HStack(spacing:0) {
+//                            Text("\(vm.hour):")
+//                                .font(.largeTitle)
+//                                .fontWeight(vm.changeToMin ? .light : .bold)
+//                                .onTapGesture {
+//                                    vm.angle = Double(vm.hour * 30) // 시간값 디폴트 설정
+//                                    vm.changeToMin = false // 상태값 변경
+//                                }
+//
+//                            Text("\(vm.min < 10 ? "0" : "")\(vm.min)")
+//                                .font(.largeTitle)
+//                                .fontWeight(vm.changeToMin ? .bold : .light)
+//                                .onTapGesture {
+//                                    vm.angle = Double(vm.min * 6)
+//                                    vm.changeToMin = true // 상태값 변경
+//                                }
+//                        }
+//                        VStack(spacing:8) {
+//                            Text("AM")
+//                                .font(.title2)
+//                                .fontWeight(vm.symbol == "AM" ? .bold : .light)
+//                                .onTapGesture {
+//                                    vm.symbol = "AM" // 상태값 변경
+//                                }
+//
+//                            Text("PM")
+//                                .font(.title2)
+//                                .fontWeight(vm.symbol == "PM" ? .bold : .light)
+//                                .onTapGesture {
+//                                    vm.symbol = "PM" // 상태값 변경
+//                                }
+//                        }
                     }
                     .padding()
                     .foregroundColor(.white)
+                    .frame(height: 100)
                     
                     // 시계 슬라이더 뷰
                     TimeSliderView()
@@ -108,9 +117,15 @@ struct TimePickerClockView_Previews: PreviewProvider {
 
 //MARK: - Data관련
 class DateVM: ObservableObject {
-    @Published var seletedDate = Date()
+    // 날짜 선택시마다.
+    @Published var seletedDate = Date() {
+        didSet {
+            self.setTime()
+        }
+    }
     @Published var showPicker = false
     
+    // 시, 분 선택시마다
     @Published var hour:Int = 12
     @Published var min:Int = 0
     
@@ -142,6 +157,7 @@ class DateVM: ObservableObject {
             }
         }
         
+        // 완료 처리.
         if let date = format.date(from: "\(currentHourValue):\(min)") {
             self.seletedDate = date
             withAnimation {
@@ -151,7 +167,35 @@ class DateVM: ObservableObject {
         }
     }
     
-    func setTiem() {
+    /// 데이트 값 셋팅
+    func setSeletedDate() {
+        let format = DateFormatter()
+        format.dateFormat = "HH:mm"
+        
+        // 24시간 체크
+        var currentHourValue = hour
+        if symbol == "AM" {
+            if hour >= 12 {
+                currentHourValue = hour - 12
+            } else {
+                currentHourValue = hour
+            }
+        } else {
+            if hour >= 12 {
+                currentHourValue = hour
+            } else {
+                currentHourValue = hour + 12
+            }
+        }
+        
+        // 완료 처리.
+        if let date = format.date(from: "\(currentHourValue):\(min)") {
+            self.seletedDate = date
+        }
+    }
+    
+    /// 시, 분 셋팅
+    func setTime() {
         let calender = Calendar.current
         
         // 24 시간이여서 확인
@@ -166,7 +210,12 @@ class DateVM: ObservableObject {
         
         min = calender.component(.minute, from: seletedDate)
         
-        angle = Double(hour * 30)
+        
+        if changeToMin {
+            angle = Double(min * 6) // 디폴트 셋팅
+        } else {
+            angle = Double(hour * 30)
+        }
     }
 }
 
@@ -215,6 +264,11 @@ struct TimeSliderView: View {
                     .rotationEffect(.init(degrees: Double(index) * 30))
                 }
                 
+                // 로고 넣기
+                Image("단체005", bundle: nil)
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                
                 // 가운데 점 + 시계바늘
                 Circle()
                     .fill(.blue)
@@ -226,6 +280,7 @@ struct TimeSliderView: View {
                         ,alignment: .bottom
                     )
                     .rotationEffect(.init(degrees: vm.angle)) // 해당 값에 따른이동
+                
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             
@@ -255,6 +310,9 @@ struct TimeSliderView: View {
             // 움직이는 범위 정하기 (360/12 = 30도씩)
             let roundValue = 30 * Int(round(vm.angle / 30))
             vm.angle = Double(roundValue)
+            
+            // 시간 셋팅
+            vm.hour = Int(vm.angle / 30)
         }
         
         // 분 선택시
@@ -268,14 +326,13 @@ struct TimeSliderView: View {
     func onEnd(_ value: DragGesture.Value) {
         
         if !vm.changeToMin {
-            
-            // 시간 셋팅
-            vm.hour = Int(vm.angle / 30)
-            
             withAnimation {
                 vm.angle = Double(vm.min * 6) // 디폴트 셋팅
                 vm.changeToMin = true
             }
         }
+        
+        /// 데이트 값 최신화
+        vm.setSeletedDate()
     }
 }
