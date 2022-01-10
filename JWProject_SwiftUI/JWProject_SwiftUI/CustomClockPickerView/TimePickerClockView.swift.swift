@@ -26,49 +26,49 @@ struct TimePickerClockView: View {
                 }
             
             if vm.showPicker {
-                // Picker View
+                // Picker View3
                 VStack {
                     HStack(spacing:18) {
                         Spacer()
-                        /// 날짜 피커
-                        DatePicker("날짜선택(기본피커)", selection: $vm.seletedDate, displayedComponents: .hourAndMinute)
-                            .font(.largeTitle)
-                            .pickerStyle(.inline)
-                            .colorMultiply(.white)
-                            .colorInvert()
+//                        /// 날짜 피커
+//                        DatePicker("날짜선택(기본피커)", selection: $vm.seletedDate, displayedComponents: .hourAndMinute)
+//                            .font(.largeTitle)
+//                            .pickerStyle(.inline)
+//                            .colorMultiply(.white)
+//                            .colorInvert()
                         // 시간설정뷰
-//                        HStack(spacing:0) {
-//                            Text("\(vm.hour):")
-//                                .font(.largeTitle)
-//                                .fontWeight(vm.changeToMin ? .light : .bold)
-//                                .onTapGesture {
-//                                    vm.angle = Double(vm.hour * 30) // 시간값 디폴트 설정
-//                                    vm.changeToMin = false // 상태값 변경
-//                                }
-//
-//                            Text("\(vm.min < 10 ? "0" : "")\(vm.min)")
-//                                .font(.largeTitle)
-//                                .fontWeight(vm.changeToMin ? .bold : .light)
-//                                .onTapGesture {
-//                                    vm.angle = Double(vm.min * 6)
-//                                    vm.changeToMin = true // 상태값 변경
-//                                }
-//                        }
-//                        VStack(spacing:8) {
-//                            Text("AM")
-//                                .font(.title2)
-//                                .fontWeight(vm.symbol == "AM" ? .bold : .light)
-//                                .onTapGesture {
-//                                    vm.symbol = "AM" // 상태값 변경
-//                                }
-//
-//                            Text("PM")
-//                                .font(.title2)
-//                                .fontWeight(vm.symbol == "PM" ? .bold : .light)
-//                                .onTapGesture {
-//                                    vm.symbol = "PM" // 상태값 변경
-//                                }
-//                        }
+                        HStack(spacing:0) {
+                            Text("\(vm.hour):")
+                                .font(.largeTitle)
+                                .fontWeight(vm.changeToMin ? .light : .bold)
+                                .onTapGesture {
+                                    vm.angle = Double(vm.hour * 30) // 시간값 디폴트 설정
+                                    vm.changeToMin = false // 상태값 변경
+                                }
+
+                            Text("\(vm.min < 10 ? "0" : "")\(vm.min)")
+                                .font(.largeTitle)
+                                .fontWeight(vm.changeToMin ? .bold : .light)
+                                .onTapGesture {
+                                    vm.angle = Double(vm.min * 6)
+                                    vm.changeToMin = true // 상태값 변경
+                                }
+                        }
+                        VStack(spacing:8) {
+                            Text("AM")
+                                .font(.title2)
+                                .fontWeight(vm.symbol == "AM" ? .bold : .light)
+                                .onTapGesture {
+                                    vm.symbol = "AM" // 상태값 변경
+                                }
+
+                            Text("PM")
+                                .font(.title2)
+                                .fontWeight(vm.symbol == "PM" ? .bold : .light)
+                                .onTapGesture {
+                                    vm.symbol = "PM" // 상태값 변경
+                                }
+                        }
                     }
                     .padding()
                     .foregroundColor(.white)
@@ -89,11 +89,12 @@ struct TimePickerClockView: View {
                     }.padding()
                 }
                 // 최대가로값 잡아주기
-                .frame(width: getWidth() - 120)
-                .background(Color.primary)
+                //.frame(width: getWidth() - 120)
+                .frame(width: 300) // 폰/패드 사이즈 문제로 고정시킴.
+                .background(.black)
                 .cornerRadius(8)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.primary.opacity(0.3).ignoresSafeArea().onTapGesture {
+                .background(Color.black.opacity(0.3).ignoresSafeArea().onTapGesture {
                     withAnimation(.spring()) {
                         vm.showPicker.toggle()
                         vm.changeToMin = false
