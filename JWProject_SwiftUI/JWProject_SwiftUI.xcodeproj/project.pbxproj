@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D9DE3A727DCE196008C7C7E /* ContentVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9DE3A627DCE196008C7C7E /* ContentVM.swift */; };
 		A34061012779B5B0005BD4DF /* JWProject_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34061002779B5B0005BD4DF /* JWProject_SwiftUIApp.swift */; };
 		A34061032779B5B0005BD4DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34061022779B5B0005BD4DF /* ContentView.swift */; };
 		A34061052779B5B2005BD4DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A34061042779B5B2005BD4DF /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D9DE3A627DCE196008C7C7E /* ContentVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentVM.swift; sourceTree = "<group>"; };
 		A34060FD2779B5B0005BD4DF /* JWProject_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWProject_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34061002779B5B0005BD4DF /* JWProject_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWProject_SwiftUIApp.swift; sourceTree = "<group>"; };
 		A34061022779B5B0005BD4DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				A34061002779B5B0005BD4DF /* JWProject_SwiftUIApp.swift */,
 				A34061022779B5B0005BD4DF /* ContentView.swift */,
+				6D9DE3A627DCE196008C7C7E /* ContentVM.swift */,
 				CC2B72A4277A061000CD2096 /* AppleTutorial */,
 				A3D1B1C3277C09AA00183B97 /* CustomClockPickerView */,
 				A34061042779B5B2005BD4DF /* Assets.xcassets */,
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D9DE3A727DCE196008C7C7E /* ContentVM.swift in Sources */,
 				A3D1B1C7277C0A2F00183B97 /* TimePickerClockView.swift.swift in Sources */,
 				A34061032779B5B0005BD4DF /* ContentView.swift in Sources */,
 				CC2B72A6277B48A400CD2096 /* ClockView.swift in Sources */,
