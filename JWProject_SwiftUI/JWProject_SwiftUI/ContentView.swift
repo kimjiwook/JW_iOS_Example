@@ -7,10 +7,23 @@
 
 import SwiftUI
 
+/// 최초 시작 뷰
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ScrollView {
+            LazyVStack {
+                ContentItemView()
+            }
+        }
+    }
+}
+
+/// Item View
+struct ContentItemView:View {
+    var body: some View {
+        HStack {
+            Text("4444")
+        }
     }
 }
 
