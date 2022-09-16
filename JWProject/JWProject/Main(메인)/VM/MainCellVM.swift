@@ -47,4 +47,7 @@ enum MainMenuId {
     
     /// Apple - SFSymbols
     case SFSymbols_Apple
+    
+    /// 사진접근권한 및 설정이동
+    case PrivatePhoto_Setting
 }

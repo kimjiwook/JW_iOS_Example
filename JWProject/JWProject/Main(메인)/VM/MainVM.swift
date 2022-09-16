@@ -36,6 +36,8 @@ struct MainVM {
         // 3. Apple-SFSymbols
         result.append(MainCellVM(uuid: .SFSymbols_Apple, title: "SFSSymbols_Apple", content: "Apple 기본이미지 정보샘플"))
         
+        // 4. 사진접근권한 및 설정 페이지 이동
+        result.append(MainCellVM(uuid: .PrivatePhoto_Setting, title: "PrivatePhoto_Setting", content: "사진접근권한 및 설정이동"))
         
         return result
     }

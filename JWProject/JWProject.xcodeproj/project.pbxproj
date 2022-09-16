@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A3097E63263AAAE100D5222B /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = A3097E62263AAAE100D5222B /* Hero */; };
-		A3097E64263AAAE100D5222B /* Hero in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A3097E62263AAAE100D5222B /* Hero */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		6D70497428D416CC009356EF /* PhotoAndSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70497328D416CC009356EF /* PhotoAndSettingViewController.swift */; };
 		A3278A45261B4A0D0074988D /* JWLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = A3278A44261B4A0D0074988D /* JWLibrary */; };
 		A33B08712611E93D00B0541E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B08702611E93D00B0541E /* AppDelegate.swift */; };
 		A33B08732611E93D00B0541E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B08722611E93D00B0541E /* SceneDelegate.swift */; };
@@ -53,7 +52,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A3097E64263AAAE100D5222B /* Hero in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6D70497328D416CC009356EF /* PhotoAndSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAndSettingViewController.swift; sourceTree = "<group>"; };
 		A33B086D2611E93D00B0541E /* JWProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33B08702611E93D00B0541E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A33B08722611E93D00B0541E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,7 +91,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3278A45261B4A0D0074988D /* JWLibrary in Frameworks */,
-				A3097E63263AAAE100D5222B /* Hero in Frameworks */,
 				A3B374B5261C925000C86AFD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +112,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D70497228D416AB009356EF /* PhotoAndSetting */ = {
+			isa = PBXGroup;
+			children = (
+				6D70497328D416CC009356EF /* PhotoAndSettingViewController.swift */,
+			);
+			path = PhotoAndSetting;
+			sourceTree = "<group>";
+		};
 		A33B08642611E93D00B0541E = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +206,7 @@
 		A37169DA2625D2470072AAB3 /* SubViews(내부상세) */ = {
 			isa = PBXGroup;
 			children = (
+				6D70497228D416AB009356EF /* PhotoAndSetting */,
 				A37169DB2625D25F0072AAB3 /* UIMenu */,
 				A3EE3013264432A200EE87BC /* SFSymbols_Apple */,
 			);
@@ -253,7 +260,6 @@
 			packageProductDependencies = (
 				A3278A44261B4A0D0074988D /* JWLibrary */,
 				A3B374B4261C925000C86AFD /* Alamofire */,
-				A3097E62263AAAE100D5222B /* Hero */,
 			);
 			productName = JWProject;
 			productReference = A33B086D2611E93D00B0541E /* JWProject.app */;
@@ -329,7 +335,6 @@
 			packageReferences = (
 				A3278A43261B4A0D0074988D /* XCRemoteSwiftPackageReference "JW_Library_SPM_Sample" */,
 				A3B374B3261C925000C86AFD /* XCRemoteSwiftPackageReference "Alamofire" */,
-				A3097E61263AAAE100D5222B /* XCRemoteSwiftPackageReference "Hero" */,
 			);
 			productRefGroup = A33B086E2611E93D00B0541E /* Products */;
 			projectDirPath = "";
@@ -382,6 +387,7 @@
 				A33B08712611E93D00B0541E /* AppDelegate.swift in Sources */,
 				A33B08732611E93D00B0541E /* SceneDelegate.swift in Sources */,
 				A3EE3016264432CA00EE87BC /* SFSymbols_AppleViewController.swift in Sources */,
+				6D70497428D416CC009356EF /* PhotoAndSettingViewController.swift in Sources */,
 				A34EDCEF26244075000B633A /* MainCellVM.swift in Sources */,
 				A37169DD2625D27B0072AAB3 /* UIMenuSampleViewController.swift in Sources */,
 				A34EDCFD2624417A000B633A /* Constants.swift in Sources */,
@@ -562,7 +568,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = JWProject/JWProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3HTS687964;
+				DEVELOPMENT_TEAM = BR6U9G47ZR;
 				INFOPLIST_FILE = JWProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -583,7 +589,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = JWProject/JWProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3HTS687964;
+				DEVELOPMENT_TEAM = BR6U9G47ZR;
 				INFOPLIST_FILE = JWProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -723,14 +729,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A3097E61263AAAE100D5222B /* XCRemoteSwiftPackageReference "Hero" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/HeroTransitions/Hero.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.6.1;
-			};
-		};
 		A3278A43261B4A0D0074988D /* XCRemoteSwiftPackageReference "JW_Library_SPM_Sample" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kimjiwook/JW_Library_SPM_Sample.git";
@@ -750,11 +748,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A3097E62263AAAE100D5222B /* Hero */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A3097E61263AAAE100D5222B /* XCRemoteSwiftPackageReference "Hero" */;
-			productName = Hero;
-		};
 		A3278A44261B4A0D0074988D /* JWLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A3278A43261B4A0D0074988D /* XCRemoteSwiftPackageReference "JW_Library_SPM_Sample" */;

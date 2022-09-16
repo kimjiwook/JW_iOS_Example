@@ -8,8 +8,6 @@
 import UIKit
 import SnapKit  //AutoLayout 서포트
 import JWLibrary // 테스트 라이브러리
-//import KLAGO_COMMON // 회사꺼
-import Hero // Hero 라이브러리 참고하려고 받음
 
 class ViewController: UIViewController {
     // MARK: - UI 관련
@@ -113,6 +111,10 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource 
             // 애플 SF Symbols 테스트
             let sfVC = SFSymbols_AppleViewController.instanse()
             self.navigationController?.pushViewController(sfVC, animated: true)
+            break
+        case .PrivatePhoto_Setting:
+            let photoSetting = PhotoAndSettingViewController.instance()
+            self.navigationController?.pushViewController(photoSetting, animated: true)
             break
             
         default:
