@@ -36,7 +36,7 @@ enum ContentId:String {
 
 class ContentItemVM: ObservableObject, Identifiable {
     /// 키값
-    @Published var uuid = UUID().uuidString
+    @Published var pid:ContentId = .P001
     /// 생성날짜
     @Published var createDate:Date = Date()
     /// 제목
@@ -50,7 +50,7 @@ class ContentItemVM: ObservableObject, Identifiable {
 extension ContentItemVM: Equatable {
     /// 비교 연산자
     static func == (lhs: ContentItemVM, rhs: ContentItemVM) -> Bool {
-        return lhs.uuid == rhs.uuid
+        return lhs.pid == rhs.pid
     }
 }
 

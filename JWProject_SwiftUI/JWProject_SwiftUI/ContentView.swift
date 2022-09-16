@@ -17,6 +17,8 @@ struct ContentView: View {
             ScrollView {
                 LazyVStack {
                     ForEach(vm.listItem) { listVM in
+
+                        
                         NavigationLink(destination: ClockView()) {
                             ContentItemView(listVM: listVM)
                         }   
