@@ -50,4 +50,7 @@ enum MainMenuId {
     
     /// 사진접근권한 및 설정이동
     case PrivatePhoto_Setting
+    
+    /// 커스텀 사진첩
+    case CustomPhoto
 }

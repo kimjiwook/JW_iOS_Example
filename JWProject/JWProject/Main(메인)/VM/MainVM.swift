@@ -39,6 +39,9 @@ struct MainVM {
         // 4. 사진접근권한 및 설정 페이지 이동
         result.append(MainCellVM(uuid: .PrivatePhoto_Setting, title: "PrivatePhoto_Setting", content: "사진접근권한 및 설정이동"))
         
+        // 5. 커스텀 사진첩
+        result.append(MainCellVM(uuid: .CustomPhoto, title: "CustomPhoto", content: "사진첩 샘플"))
+        
         return result
     }
 }

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6D70497428D416CC009356EF /* PhotoAndSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70497328D416CC009356EF /* PhotoAndSettingViewController.swift */; };
+		6D7D9A4328EFA8B2006E8531 /* CustomPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D9A4228EFA8B2006E8531 /* CustomPhotoViewController.swift */; };
+		6D7D9A4528EFACF6006E8531 /* CustomPhotoPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D9A4428EFACF6006E8531 /* CustomPhotoPickView.swift */; };
+		6D7D9A4728EFAD08006E8531 /* CustomPhotoPickVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7D9A4628EFAD08006E8531 /* CustomPhotoPickVM.swift */; };
+		6D971CD128F5526C002A713F /* CustomPhotoSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D971CD028F5526C002A713F /* CustomPhotoSampleView.swift */; };
 		A3278A45261B4A0D0074988D /* JWLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = A3278A44261B4A0D0074988D /* JWLibrary */; };
 		A33B08712611E93D00B0541E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B08702611E93D00B0541E /* AppDelegate.swift */; };
 		A33B08732611E93D00B0541E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33B08722611E93D00B0541E /* SceneDelegate.swift */; };
@@ -59,7 +63,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6D32837328F5B16A00331911 /* ko */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ko; path = ko.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D32837428F5B16A00331911 /* ko */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ko; path = ko.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D70497328D416CC009356EF /* PhotoAndSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAndSettingViewController.swift; sourceTree = "<group>"; };
+		6D7D9A4228EFA8B2006E8531 /* CustomPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPhotoViewController.swift; sourceTree = "<group>"; };
+		6D7D9A4428EFACF6006E8531 /* CustomPhotoPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPhotoPickView.swift; sourceTree = "<group>"; };
+		6D7D9A4628EFAD08006E8531 /* CustomPhotoPickVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPhotoPickVM.swift; sourceTree = "<group>"; };
+		6D971CD028F5526C002A713F /* CustomPhotoSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPhotoSampleView.swift; sourceTree = "<group>"; };
 		A33B086D2611E93D00B0541E /* JWProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33B08702611E93D00B0541E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A33B08722611E93D00B0541E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +128,17 @@
 				6D70497328D416CC009356EF /* PhotoAndSettingViewController.swift */,
 			);
 			path = PhotoAndSetting;
+			sourceTree = "<group>";
+		};
+		6D7D9A4128EFA89A006E8531 /* CustomPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				6D7D9A4228EFA8B2006E8531 /* CustomPhotoViewController.swift */,
+				6D7D9A4428EFACF6006E8531 /* CustomPhotoPickView.swift */,
+				6D7D9A4628EFAD08006E8531 /* CustomPhotoPickVM.swift */,
+				6D971CD028F5526C002A713F /* CustomPhotoSampleView.swift */,
+			);
+			path = CustomPhoto;
 			sourceTree = "<group>";
 		};
 		A33B08642611E93D00B0541E = {
@@ -206,6 +227,7 @@
 		A37169DA2625D2470072AAB3 /* SubViews(내부상세) */ = {
 			isa = PBXGroup;
 			children = (
+				6D7D9A4128EFA89A006E8531 /* CustomPhoto */,
 				6D70497228D416AB009356EF /* PhotoAndSetting */,
 				A37169DB2625D25F0072AAB3 /* UIMenu */,
 				A3EE3013264432A200EE87BC /* SFSymbols_Apple */,
@@ -330,6 +352,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = A33B08642611E93D00B0541E;
 			packageReferences = (
@@ -384,8 +407,12 @@
 				A33B08752611E93D00B0541E /* ViewController.swift in Sources */,
 				A3D5CB802625BC88008BBDAC /* MainCell.swift in Sources */,
 				A34EDCF426244080000B633A /* MainVM.swift in Sources */,
+				6D7D9A4528EFACF6006E8531 /* CustomPhotoPickView.swift in Sources */,
 				A33B08712611E93D00B0541E /* AppDelegate.swift in Sources */,
+				6D7D9A4328EFA8B2006E8531 /* CustomPhotoViewController.swift in Sources */,
 				A33B08732611E93D00B0541E /* SceneDelegate.swift in Sources */,
+				6D7D9A4728EFAD08006E8531 /* CustomPhotoPickVM.swift in Sources */,
+				6D971CD128F5526C002A713F /* CustomPhotoSampleView.swift in Sources */,
 				A3EE3016264432CA00EE87BC /* SFSymbols_AppleViewController.swift in Sources */,
 				6D70497428D416CC009356EF /* PhotoAndSettingViewController.swift in Sources */,
 				A34EDCEF26244075000B633A /* MainCellVM.swift in Sources */,
@@ -430,6 +457,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A33B08772611E93D00B0541E /* Base */,
+				6D32837328F5B16A00331911 /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -438,6 +466,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A33B087C2611E93E00B0541E /* Base */,
+				6D32837428F5B16A00331911 /* ko */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -449,6 +478,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -510,6 +540,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -609,7 +640,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6X255DSFKG;
+				DEVELOPMENT_TEAM = BR6U9G47ZR;
 				INFOPLIST_FILE = JWProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -631,7 +662,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6X255DSFKG;
+				DEVELOPMENT_TEAM = BR6U9G47ZR;
 				INFOPLIST_FILE = JWProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -652,7 +683,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6X255DSFKG;
+				DEVELOPMENT_TEAM = BR6U9G47ZR;
 				INFOPLIST_FILE = JWProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -672,7 +703,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6X255DSFKG;
+				DEVELOPMENT_TEAM = BR6U9G47ZR;
 				INFOPLIST_FILE = JWProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

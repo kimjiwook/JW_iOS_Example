@@ -117,6 +117,11 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource 
             self.navigationController?.pushViewController(photoSetting, animated: true)
             break
             
+        case .CustomPhoto:
+            let customPhoto = CustomPhotoViewController.instance()
+            self.navigationController?.pushViewController(customPhoto, animated: true)
+            break
+            
         default:
             // 아직 정의되지 않은 부분
             break
